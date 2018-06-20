@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
+import entity.Developer;
+
 public class ComparatorExample {
 
 	public static void main(String[] args) {
@@ -52,7 +54,7 @@ public class ComparatorExample {
 
 	}
 
-	public static <T> void print(Collection<T> collection) {
+	private static <T> void print(Collection<T> collection) {
 
 		Iterator<T> it = collection.iterator();
 
@@ -61,48 +63,4 @@ public class ComparatorExample {
 			System.out.println(developer);
 		}
 	}
-}
-
-class Developer {
-
-	private String firstName;
-	private String lastName;
-	private int salary;
-
-	public Developer(String firstName, String lastName, int salary) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.salary = salary;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public int getSalary() {
-		return salary;
-	}
-
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
-
-	@Override
-	public String toString() {
-		return firstName + " " + lastName + " " + salary;
-	}
-
 }
